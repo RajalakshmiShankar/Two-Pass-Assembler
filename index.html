@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assembler</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .cool-header {
+            font-family: 'Russo One', sans-serif;
+            text-align: center;
+            color: #fff;
+            background-color: #4a69bd;
+            padding: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 2.5em;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .cool-header span {
+            display: block;
+            font-size: 1.2em;
+            color: #82ccdd;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cool-header">
+        Two Pass Assembler
+        <span>Convert Assembly Code to Machine Code</span>
+    </header>
+
+    <main class="container place">
+        <section class="bndry1">
+            <h2>👇Enter Assembly Code 👇</h2>
+            <div class="fulline">
+                <div class="text1">
+                    <label for="text1">Assembly Code</label>
+                    <textarea id="pass1" placeholder="Enter your assembly code here..."></textarea>
+                </div>
+                <div class="div1">
+                    <input type="file" name="file" id="file1" accept=".txt">
+                    <div class="funBtns1">
+                        <button id="btn1">Load SRC</button>
+                        <button id="btnsave1">Save SRC</button>
+                        <button id="clrsrc">Clear SRC</button>
+                    </div>
+                </div>
+                <div class="text2">
+                    <label for="op">OPTAB</label>
+                    <textarea id="op" placeholder="Your opcode will display here"></textarea>
+                </div>
+            </div>
+            <div class="uplod">
+                <div class="div2">
+                    <input type="file" id="file2" accept=".txt">
+                    <div class="funBtns2">
+                        <button id="btn2">Upload OP</button>
+                        <button id="btnsave2">Save OP</button>
+                        <button id="clrop">Clear OP</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="btn-center">
+            <button id="btnp1">Get Pass One</button>
+        </div>
+
+        <section class="bndry1">
+            <h2>Output for Pass 1</h2>
+            <div class="fulline">
+                <div class="text1">
+                    <h2>Intermediate File</h2>
+                    <textarea id="output1" placeholder="You will get INTERMEDIATE FILE for pass 1 here"></textarea>
+                </div>
+                <div class="div1">
+                    <button id="btnsave3">Save File</button>
+                    <button id="clrout1">Clear Text</button>
+                </div>
+                <div class="text2">
+                    <h2>SYMTAB</h2>
+                    <textarea id="symtab" placeholder="Your symtab will display here"></textarea>
+                </div>
+            </div>
+            <div class="uplod">
+                <div class="div2">
+                    <button id="btnsave4">Save File</button>
+                    <button id="clrsym">Clear Text</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="btn-center">
+            <button id="btnp2">Get Pass Two</button>
+        </div>
+
+        <section class="bndry1">
+            <h2>Output for Pass 2</h2>
+            <div class="text1">
+                <textarea readonly id="output2" placeholder="You will get output for pass 2 here"></textarea>
+            </div>
+            <div>
+                <button id="btnsave5">Save File</button>
+                <button id="clrout2">Clear Text</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-center">
+            <p>&copy; 2024 <span>Two Pass Assembler</span> All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
